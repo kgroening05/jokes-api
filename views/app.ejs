@@ -6,12 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <title><%= locals.title %></title>
-    <script>
-        function showPunchline(){
-            const punchline = document.getElementById('punchline');
-            punchline.style.display = 'block' 
-        }
-    </script>
+    <script src="/scripts/script.js" defer></script>
 </head>
 <body>
     <p onclick="showPunchline()"><%= locals.joke.question %></p>
