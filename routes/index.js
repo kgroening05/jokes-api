@@ -12,11 +12,27 @@ router.get(
     })
 })
 
+router.get(
+    '/api',
+    Jokes.getJoke,
+    (req, res) => {
+        res.json(res.locals.joke)
+    }
+)
+
 router.post(
     '/',
     Jokes.saveJoke,
     (req, res) => {
         res.redirect('/')
+    }
+)
+
+router.post(
+    '/api',
+    Jokes.saveJoke,
+    (req, res) => {
+        res.json({"message":"joke saved"})
     }
 )
 
