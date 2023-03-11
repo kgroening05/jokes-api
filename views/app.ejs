@@ -5,10 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= locals.title %></title>
+    <script>
+        function showPunchline(){
+            const punchline = document.getElementById('punchline');
+            punchline.style.display = 'block' 
+        }
+    </script>
 </head>
 <body>
-    <%= locals.joke.question %>
-    <%= locals.joke.answer %>
+    <p onclick="showPunchline()"><%= locals.joke.question %></p>
+    <p id="punchline" style="display:none"><%= locals.joke.answer %></p>
     <form action="/" method="POST">
         <input type="text" name="question" placeholder="Add new joke">
         <input type="text" name="answer" placeholder="Punchline?">
