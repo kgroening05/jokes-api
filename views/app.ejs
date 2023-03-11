@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
     <title><%= locals.title %></title>
     <script>
         function showPunchline(){
@@ -14,7 +15,7 @@
 </head>
 <body>
     <p onclick="showPunchline()"><%= locals.joke.question %></p>
-    <p id="punchline" style="display:none"><%= locals.joke.answer %></p>
+    <p id="punchline"><%= locals.joke.answer %></p>
     <form action="/" method="POST">
         <input type="text" name="question" placeholder="Add new joke">
         <input type="text" name="answer" placeholder="Punchline?">
