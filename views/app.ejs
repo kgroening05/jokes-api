@@ -13,12 +13,16 @@
         <p id="joke" onclick="showPunchline()"><%= locals.joke.question %></p>
         <p id="punchline"><%= locals.joke.answer %></p>
     </div>
+    <% if(user) {%>
+        <form action="/" method="POST">
+            <textarea type="text" name="question" placeholder="Add new joke"></textarea>
+            <textarea type="text" name="answer" placeholder="Punchline?"></textarea>
+            <input type="submit" value="Submit">
+        </form>
+        <form action="/logout/" method="POST"><button>Logout</button></form>
+    <% } else { %>
     <p>Log In to Add Jokes</p>
     <a href="/login/google-auth"><button>Login With Google</button></a>
-    <form action="/" method="POST">
-        <textarea type="text" name="question" placeholder="Add new joke"></textarea>
-        <textarea type="text" name="answer" placeholder="Punchline?"></textarea>
-        <input type="submit" value="Submit">
-    </form>
+    <% } %>
 </body>
 </html>
