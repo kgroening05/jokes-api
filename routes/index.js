@@ -8,7 +8,8 @@ router.get(
     (req, res) => {
         res.render('app', {
             title: 'hello World',
-            joke: res.locals.joke
+            joke: res.locals.joke,
+            user: req.user,
     })
 })
 
