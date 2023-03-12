@@ -9,11 +9,13 @@
     <script src="/scripts/script.js" defer></script>
 </head>
 <body>
-    <p onclick="showPunchline()"><%= locals.joke.question %></p>
-    <p id="punchline"><%= locals.joke.answer %></p>
+    <div class="joke-area">
+        <p id="joke" onclick="showPunchline()"><%= locals.joke.question %></p>
+        <p id="punchline"><%= locals.joke.answer %></p>
+    </div>
     <form action="/" method="POST">
-        <input type="text" name="question" placeholder="Add new joke">
-        <input type="text" name="answer" placeholder="Punchline?">
+        <textarea type="text" name="question" placeholder="Add new joke"></textarea>
+        <textarea type="text" name="answer" placeholder="Punchline?"></textarea>
         <input type="submit" value="Submit">
     </form>
 </body>
