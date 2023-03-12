@@ -8,7 +8,6 @@ exports.getJoke = async (req, res, next) => {
         .findOne()
         .skip(randomJoke)
         .exec()
-    console.log(result)
     res.locals.joke = result
     next()
 }
