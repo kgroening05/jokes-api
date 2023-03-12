@@ -7,6 +7,7 @@ const session = require("express-session");
 const { store, connectDb } = require('./utils/dbConnect')
 const indexRouter = require('./routes/index')
 const loginRouter = require('./routes/login')
+const logoutRouter = require('./routes/logout')
 
 connectDb()
 require('dotenv').config()
@@ -39,6 +40,7 @@ passport.deserializeUser(user.deserializeUser);
 
 app.use('/', indexRouter)
 app.use('/login', loginRouter)
+app.use('/logout', logoutRouter)
 
 const server = http.createServer(app)
 server.listen(app.get('port'))
