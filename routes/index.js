@@ -7,7 +7,7 @@ router.get(
     Jokes.getJoke,
     (req, res) => {
         res.render('app', {
-            title: 'hello World',
+            title: 'Dad Jokes',
             joke: res.locals.joke,
             user: req.user,
     })
