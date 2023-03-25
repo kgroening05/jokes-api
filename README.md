@@ -5,7 +5,7 @@ A fun project to practice creating a RESTful API with node and Express.
 
 Get a random joke on page load. Log in to add your own jokes.
 
-Try it here: <dad-jokes-api.fly.dev>
+Try it here: [dad-jokes-api.fly.dev](dad-jokes-api.fly.dev)
 
 The jokes are largely from the internet. Some are jokes I had embedded in my memory for some reason.
 
